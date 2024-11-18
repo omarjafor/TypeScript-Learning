@@ -15,5 +15,6 @@ let friends : string[] = ["John", "Mary", "Peter"];
 let numbers : number[] = [1, 2, 3];
 numbers.push(5)
 
+// tuple 
 let person : {name: string, age: number} = {name: "John", age: 25};
 console.log(person);
