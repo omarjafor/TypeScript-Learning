@@ -74,7 +74,7 @@ type Student = {
     id: number,
     name: string,
     age: number,
-    gender : string,
+    gender: string,
     address: string,
     contact?: string,
     grade?: string,
@@ -90,7 +90,7 @@ const student1: Student = {
     address: 'Chittagong, Bangladesh',
 }
 
-const student2 : Student = {
+const student2: Student = {
     id: 2,
     name: 'Mizan',
     age: 35,
@@ -100,9 +100,55 @@ const student2 : Student = {
 
 type UserName = string;
 type UserAge = number;
-const userName : UserName = 'John';
-const userAge : UserAge = 25;
-type Add = (num1 : number, num2 : number) => number;
-const add : Add= (num1, num2) => num1 + num2;
+const userName: UserName = 'John';
+const userAge: UserAge = 25;
+type Add = (num1: number, num2: number) => number;
+const adds: Add = (num1, num2) => num1 + num2;
 
-// Union and Intersection Types 
+// Union and Intersection Types
+
+// Union Types (|) - can be one of several types
+let code: string | number | boolean;
+code = '123';
+code = 123;
+code = true;
+// console.log(code);
+
+// Union type with array
+const myArray: (string | number)[] = ['123', 123, 'Hello', 456];
+
+// Literal types with union
+type Color = 'red' | 'green' | 'blue';
+const color: Color = 'red';
+
+// Union type in function parameters
+function display(id: number | string, name: string | number) {
+    console.log(`ID is ${id}, Name is ${name}`);
+}
+
+// Intersection Types (&) - combining multiple types
+type Person2 = {
+    name: string;
+    age: number;
+}
+type Employee = {
+    employeeId: number;
+    department: string;
+}
+// Combining both types using intersection
+type Manager = Person2 & Employee;
+const manager: Manager = {
+    name: 'John',
+    age: 35,
+    employeeId: 123,
+    department: 'Sales'
+}
+
+// Type narrowing with union types
+function getLength(str: string | number) {
+    if (typeof str === 'string') {
+        console.log(str.length);
+    } else if (typeof str === 'number') {
+        console.log(str.toString().length);
+    }
+}
