@@ -12,13 +12,6 @@ const number2 = 3;
 const addArrow = (num1: number, num2: number): number => num1 + num2;
 // console.log(addArrow(number, number2));
 
-const age2 = 20;
-if (age2 >= 18) {
-    console.log("You are an adult");
-} else {
-    console.log("You are a minor");
-}
-
 // object --> function --> method 
 const poorUser = {
     name: "John",
@@ -152,3 +145,16 @@ function getLength(str: string | number) {
         console.log(str.toString().length);
     }
 }
+
+const age2 = 20;
+if (age2 >= 18) {
+    console.log("You are an adult");
+} else {
+    console.log("You are a minor");
+}
+const isAdult = age2 >= 18 ? 'Adult' : 'Minor';
+const aunthenticate = undefined;
+const isAuth = aunthenticate ?? 'Guest';
+
+const richUser = chumUser?.name?.firstName ?? 'No Balance';
+console.log(richUser);
