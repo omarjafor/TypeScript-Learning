@@ -158,3 +158,7 @@ const isAuth = aunthenticate ?? 'Guest';
 
 const richUser = chumUser?.name?.firstName ?? 'No Balance';
 console.log(richUser);
+
+// nullable types 
+let name1 : string | null = 'John';
+let age1 : number | null = 25;
