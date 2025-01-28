@@ -12,8 +12,8 @@ let age : undefined = undefined;
 let address : null = null;
 
 let friends : string[] = ["John", "Mary", "Peter"];
-let numbers : number[] = [1, 2, 3];
-numbers.push(5)
+let numArray : number[] = [1, 2, 3];
+numArray.push(5)
 
 // tuple 
 let person : {name: string, age: number} = {name: "John", age: 25};
