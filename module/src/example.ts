@@ -159,6 +159,37 @@ const isAuth = aunthenticate ?? 'Guest';
 const richUser = chumUser?.name?.firstName ?? 'No Balance';
 console.log(richUser);
 
-// nullable types 
+// nullable types / unkonwn types
 let name1 : string | null = 'John';
 let age1 : number | null = 25;
+
+const searchName = (value: string | null) => {
+    if(value){
+        console.log('Search value: ', value);
+    } else {
+        console.log('No value found');
+    }
+};
+searchName('John');
+
+// unknown type
+const getSpeedinMeterPerSecond = (value: unknown) => {
+    if(typeof value === 'number'){
+        const speed = (value * 1000) / 3600;
+        console.log('Speed in meter per second: ', speed);
+    } else if(typeof value === 'string'){
+        const [speed, unit] = value.split(' ');
+        const convertedSpeed = (parseInt(speed) * 1000) / 3600;
+        console.log('Speed in meter per second: ', convertedSpeed);
+    } else {
+        console.log('wrong input');
+    }
+};
+getSpeedinMeterPerSecond(null);
+
+// never type
+const throwError = (message: string): never => {
+    throw new Error(message);
+}
+
+throwError('Something went wrong');
