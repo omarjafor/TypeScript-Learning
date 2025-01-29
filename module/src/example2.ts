@@ -48,3 +48,4 @@ const student : UserData = {
     age : 20,
     status : 'Job'
 }
+console.log(student);
