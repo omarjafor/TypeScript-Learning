@@ -20,3 +20,31 @@ const kgToGram = (value : string | number) => {
 
 const result = kgToGram(1000) as number;
 const result2 = kgToGram(1000) as string;
+
+// interface and type vs interface
+
+type Animal = {
+    name : string
+}
+// merging interface, you can't do it by type
+interface Animal2 {
+    name : string
+}
+interface Animal2 {
+    age : number,
+    mark : number
+}
+// extends in interface / using $ { } in types
+type User = {
+    name : string
+}
+type User2 = {
+    status : string
+}
+type UserData = User & { age : 20 } & User2 ;
+
+const student : UserData = {
+    name : 'john',
+    age : 20,
+    status : 'Job'
+}
