@@ -49,3 +49,7 @@ const student : UserData = {
     status : 'Job'
 }
 console.log(student);
+
+// generic array
+const rollNumbers : number[] = [3,4,5,6];
+const mentorsX: string[] = ['jhon', 'bong'];
